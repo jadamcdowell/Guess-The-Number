@@ -21,5 +21,34 @@ else:
     # exit the program
     quit()
 
+# create variable to keep track of number of guesses
+num_of_guesses = 0
+
+while True:
+    # increment guesses
+    num_of_guesses += 1
+
+    # prompt user to guess the random number
+    guess = input("Guess the number: ")
+
+    # make sure what user enters is a number
+    if guess.isdigit():
+        guess = int(guess)
+
+    # if it is not a number, then print error message
+    else:
+        print("Please enter a number next time.")
+        continue
+
+    if guess == random_number:
+        print("Congratulations! You guessed the number! :)\n")
+
+        # break out of loop once user has entered the correct guess
+        break
+    else:
+        print("You got it wrong\n")
+
+
+
 
 

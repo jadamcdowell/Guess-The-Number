@@ -45,9 +45,15 @@ while True:
 
         # break out of loop once user has entered the correct guess
         break
-    else:
-        print("You got it wrong\n")
 
+    # help user narrow the random number down by letting them know if the guess is too high or too low
+    elif guess > random_number:
+        print("\nYour guess is too high!")
+    else:
+        print("\nYour guess is too low!")
+
+# output the number of guesses it took
+print("You got it in", num_of_guesses, "guesses!")
 
 
 
